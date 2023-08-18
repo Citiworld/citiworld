@@ -16,6 +16,9 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
+  '@iconify-json/material-symbols':
+    specifier: ^1.1.55
+    version: 1.1.55
   '@types/node':
     specifier: 20.4.4
     version: 20.4.4
@@ -327,6 +330,12 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/material-symbols@1.1.55:
+    resolution: {integrity: sha512-5HtpxfWFKM3qjxyWKx6RZTWnJIy8BQYOtMcoQzET45FWeu46W8O2JNNh9dzsssD4PahQW0w/9PIRm+6EAdpjLw==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:

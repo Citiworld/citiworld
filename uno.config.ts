@@ -8,6 +8,17 @@ export default defineConfig({
 	presets: [
 		presetWind(),
 		presetIcons({
+			collections: {
+				'material-symbols': () => import('@iconify-json/material-symbols/icons.json').then(i => i.default)
+			},
+			customizations: {
+				iconCustomizer(collection, icon, props) {
+					if (collection === 'material-symbols' && icon === 'arrow-forward-rounded') {
+						props.width = '1.2em'
+						props.height = '1.2em'
+					}
+				}
+			},
 			extraProperties: {
 				'display': 'inline-block',
 				'vertical-align': 'middle',
@@ -16,38 +27,63 @@ export default defineConfig({
 	],
 	rules: [
 		['font-primary', { 'font-family': 'var(--font-primary)' }],
-		['font-secondary', { 'font-family': 'var(--font-secondary)' }]
+		['font-secondary', { 'font-family': 'var(--font-secondary)' }],
+		[/^min-h-screen\/(\d+)/, match => ({ 'min-height': `${100 / parseInt(match[1])}vh` })]
 	],
 	theme: {
 		colors: {
 			primary: {
-				100: '#CCD1D6',
-				200: '#99A3AD',
-				300: '#667685',
-				400: '#33485C',
-				500: '#001A33',
+				50: '#eef7ff',
+				100: '#dcf0ff',
+				200: '#b2e2ff',
+				300: '#6dccff',
+				400: '#20b2ff',
+				500: '#0098ff',
+				600: '#0078df',
+				700: '#005fb4',
+				800: '#005195',
+				900: '#00427a',
+				950: '#001a33',
 			},
 			secondary: {
-				100: '#D2D5EA',
-				200: '#A5ACD6',
-				300: '#7982C1',
-				400: '#4C59AD',
-				500: '#1F2F98',
+				50: '#ebf3ff',
+				100: '#daeaff',
+				200: '#bcd6ff',
+				300: '#94bbff',
+				400: '#6a92ff',
+				500: '#476aff',
+				600: '#273fff',
+				700: '#1b2de7',
+				800: '#192aba',
+				900: '#1f2f98',
+				950: '#121954',
 			},
 			accent: {
-				100: '#D5E9F3',
-				200: '#ABD3E7',
-				300: '#80BCDC',
-				400: '#56A6D0',
-				500: '#2C90C4',
+				50: '#f2f9fd',
+				100: '#e4f0fa',
+				200: '#c4e2f3',
+				300: '#8fcaea',
+				400: '#53aedd',
+				500: '#2c90c4',
+				600: '#1e77ab',
+				700: '#1a5e8a',
+				800: '#195173',
+				900: '#1a4460',
+				950: '#112c40',
 			},
-			hightlight: {
-				100: '#D5EEFE',
-				200: '#ABDDFD',
-				300: '#82CCFC',
-				400: '#58BBFB',
-				500: '#2EAAFA',
-			},
+			highlight: {
+				50: '#f0f8ff',
+				100: '#e0effe',
+				200: '#b9e0fe',
+				300: '#7cc9fd',
+				400: '#2eaafa',
+				500: '#0c93eb',
+				600: '#0074c9',
+				700: '#015ca3',
+				800: '#064e86',
+				900: '#0b426f',
+				950: '#07294a',
+			}
 		},
 	}
 })
