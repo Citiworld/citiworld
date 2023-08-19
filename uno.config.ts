@@ -9,7 +9,7 @@ export default defineConfig({
 		presetWind(),
 		presetIcons({
 			collections: {
-				'material-symbols': () => import('@iconify-json/material-symbols/icons.json').then(i => i.default)
+				'material-symbols': () => import('@iconify-json/material-symbols/icons.json').then(i => i.default) as any
 			},
 			customizations: {
 				iconCustomizer(collection, icon, props) {

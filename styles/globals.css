@@ -1,2 +1,43 @@
 @import '@unocss/reset/tailwind.css';
 @unocss all;
+
+.head-1 {
+	@apply text-4xl leading-10 sm:(text-5xl leading-14) font-bold;
+
+	&+.subtitle {
+		@apply max-w-prose font-secondary mt-6 text-lg leading-8;
+	}
+}
+
+footer {
+	@apply relative px-4 sm:px-unset;
+	box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.container {
+	@apply px-4 mx-auto;
+}
+
+.btn {
+	@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors;
+
+	&.has-icons {
+		@apply inline-flex items-center gap-x-1.5;
+	}
+
+	&:disabled {
+		@apply cursor-not-allowed;
+	}
+
+	&.highlight {
+		@apply bg-highlight-400 text-white [&:not([disabled])]:(active:bg-highlight-600 hover:bg-highlight-500) disabled:(text-highlight-700 bg-highlight-200);
+	}
+}
+
+.footer-icons > a {
+	@apply transition-transform active:scale-105 hover:scale-110;
+}
+
+nav a {
+	@apply hover:text-secondary-500 transition-colors;
+}
