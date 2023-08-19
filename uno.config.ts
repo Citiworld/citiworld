@@ -31,6 +31,14 @@ export default defineConfig({
 		[/^min-h-screen\/(\d+)/, match => ({ 'min-height': `calc(${100 / parseInt(match[1])}vh - 67.2px)` })],
 	],
 	theme: {
+		breakpoints: {
+			xs: '400px',
+			sm: '640px',
+			md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+		},
 		colors: {
 			primary: {
 				50: '#eef7ff',
