@@ -28,7 +28,7 @@ export default defineConfig({
 	rules: [
 		['font-primary', { 'font-family': 'var(--font-primary)' }],
 		['font-secondary', { 'font-family': 'var(--font-secondary)' }],
-		[/^min-h-screen\/(\d+)/, match => ({ 'min-height': `${100 / parseInt(match[1])}vh` })]
+		[/^min-h-screen\/(\d+)/, match => ({ 'min-height': `calc(${100 / parseInt(match[1])}vh - 67.2px)` })],
 	],
 	theme: {
 		colors: {
