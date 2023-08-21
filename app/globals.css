@@ -9,6 +9,10 @@
 	}
 }
 
+.head-2 {
+	@apply text-3xl leading-8 sm:(text-4xl leading-10) font-bold;
+}
+
 footer {
 	@apply relative px-4 sm:px-unset;
 	box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
@@ -19,7 +23,7 @@ footer {
 }
 
 .btn {
-	@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors;
+	@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors cursor-pointer outline-0.5 outline-offset-3 outline-secondary-400;
 
 	&.has-icons {
 		@apply inline-flex items-center gap-x-1.5;
