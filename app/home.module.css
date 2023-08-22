@@ -1,0 +1,41 @@
+.slice {
+	@apply relative;
+}
+
+.slice > figure {
+	@apply content-[''] absolute inset-0 lg:h-full z-1 w-full;
+}
+
+@screen lg {
+	.slice > figure {
+		clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+	}
+}
+
+.col {
+	@apply relative z-5;
+}
+
+.card {
+	@apply rounded-3xl bg-secondary-900 overflow-clip;
+}
+
+.card > figure {
+	@apply bg-white h-60;
+}
+
+.card > h2 {
+	@apply text-2xl font-bold py-2.5;
+}
+
+.transparent-btn {
+	@apply border-1 rounded-md px-5 py-1 inline-block mt-8 hover:(bg-white text-primary-900) transition-colors;
+}
+
+.service-grid {
+	@apply grid grid-cols-2 gap-4 max-w-sm md:(gap-6 max-w-md) mx-auto self-center;
+}
+
+.service-grid > figure {
+	@apply aspect-square w-full p-8 rounded-xl bg-highlight-400 shadow-xl;
+}
