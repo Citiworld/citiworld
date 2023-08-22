@@ -44,6 +44,18 @@ footer {
 
 nav a {
 	@apply hover:text-secondary-500 transition-colors;
+
+		&[data-active] {
+		@apply border-l-primary-900
+	}
+}
+
+nav.desktop a {
+	@apply flex items-center border-y-4 border-transparent px-1;
+
+	&.active {
+		@apply border-b-primary-900;
+	}
 }
 
 .text-gradient {
