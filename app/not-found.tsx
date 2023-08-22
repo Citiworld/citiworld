@@ -18,7 +18,7 @@ export default function NotFoundPage() {
 					404
 				</p>
 				<p className="text-4xl lg:text-8xl font-secondary mb-4 font-medium">Page not found</p>
-				<p className="text-xl font-secondary mb-8">Sorry, the page you're looking for does not exist.</p>
+				<p className="text-xl font-secondary mb-8">Sorry, the page you&apos;re looking for does not exist.</p>
 				<BackButton className="btn highlight text-2xl !px-8" />
 			</div>
 		</section>
