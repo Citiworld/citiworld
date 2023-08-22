@@ -46,6 +46,11 @@ nav a {
 	@apply hover:text-secondary-500 transition-colors;
 }
 
+.text-gradient {
+	@apply bg-clip-text;
+	-webkit-text-fill-color: transparent;
+}
+
 .lds-ring {
   @apply relative inline-block aspect-square;
 }
