@@ -42,7 +42,7 @@ export default function RootLayout({
 							<Image src={Logo} alt="blue globe-like design drawn with longtitude and latitudes" width={60} />
 							<span className="text-2xl tracking-widest">CITIWORLD</span>
 						</Link>
-						<DesktopNavBar className="gap-x-7 hidden lg:flex h-full desktop" />
+						<DesktopNavBar className="gap-x-7 lt-lg:hidden flex h-full desktop" />
 						<MobileNavBar />
 					</div>
 				</header>

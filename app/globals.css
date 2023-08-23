@@ -38,6 +38,10 @@ footer {
 	}
 }
 
+.btn-highlight {
+	@apply bg-highlight-400 text-white [&:not([disabled])]:(active:bg-highlight-600 hover:bg-highlight-500) disabled:(text-highlight-700 bg-highlight-200);
+}
+
 .footer-icons > a {
 	@apply transition-transform active:scale-105 hover:scale-110;
 }

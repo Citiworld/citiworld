@@ -8,11 +8,11 @@ export default function Home() {
 	return (
 		<>
 			<section className="md:min-h-[600px] grid-rows-[1fr_2fr] sm:grid-rows-2 lg:grid-rows-1 grid relative">
-				<Pipe2 className="top-[5%] xl:top-[10%] left-0 absolute w-48 opacity-50 hidden lg:block" />
-				<Pixel className="bottom-0 left-0 absolute rotate-180 w-40 xl:w-48 opacity-50 hidden lg:block" />
-				<Pipe2 className="bottom-20 right-0 lg:left-[35%] absolute rotate-180 w-48 opacity-50 hidden lg:block" />
+				<Pipe2 className="top-[5%] xl:top-[10%] left-0 absolute w-48 opacity-50 lt-lg:hidden" />
+				<Pixel className="bottom-0 left-0 absolute rotate-180 w-40 xl:w-48 opacity-50 lt-lg:hidden" />
+				<Pipe2 className="bottom-20 right-0 lg:left-[35%] absolute rotate-180 w-48 opacity-50 lt-lg:hidden" />
 				<div className="grid static lg:absolute w-full h-full lg:grid-cols-[5fr_7fr]">
-					<div className="hidden lg:block"></div>
+					<div className="lt-lg:hidden"></div>
 					<div className={styles.slice}>
 						<figure>
 							<Image src={homebg} alt="brother printer" className="w-full h-full bottom-0 object-bottom object-cover" />
@@ -69,7 +69,7 @@ export default function Home() {
 						<Link href="/services" className="btn highlight has-icons mt-4">Learn More <span className="i-material-symbols-arrow-forward-rounded" /></Link>
 					</div>
 				</div>
-				<div className="absolute w-full bottom-0 hidden md:block">
+				<div className="absolute w-full bottom-0 lt-md:hidden">
 					<Wave />
 				</div>
 			</section >
