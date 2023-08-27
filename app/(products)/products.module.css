@@ -1,0 +1,15 @@
+.product-grid {
+	@apply max-w-5xl mx-auto grid sm:grid-cols-2 !lg:grid-cols-3 gap-10 text-center px-4 mb-16;
+}
+
+.product-grid > div {
+	@apply rounded-xl border relative bg-white pb-4 bg-clip-padding border-0.5 border-transparent border-solid text-secondary-900 shadow-lg;
+}
+
+.product-grid > div:before {
+	@apply content-[''] absolute inset-0 -z-1 -m-0.5 rounded-inherit bg-gradient-to-b from-secondary-900 to-accent-400;
+}
+
+.asset {
+	@apply absolute top-10;
+}
