@@ -42,7 +42,7 @@ export default function RootLayout({
 							<Image src={Logo} alt="blue globe-like design drawn with longtitude and latitudes" width={60} />
 							<span className="text-2xl tracking-widest">CITIWORLD</span>
 						</Link>
-						<DesktopNavBar className="gap-x-7 lt-lg:hidden flex h-full desktop" />
+						<DesktopNavBar className="gap-x-7 max-lg:hidden flex h-full desktop" />
 						<MobileNavBar />
 					</div>
 				</header>
@@ -59,9 +59,9 @@ export default function RootLayout({
 						</nav>
 						<div className="font-secondary space-y-2 text-sm">
 							<p className="font-medium text-base">CONTACT US</p>
-							<p><span className="text-base mr-1 i-material-symbols-alternate-email-rounded" /> <a className="underline" href={`mailto:${email}`}>{email}</a> </p>
-							<p><span className="text-base mr-1 i-material-symbols-call" /> 8-723-4894/8-725-7031</p>
-							<p><span className="text-base mr-1 i-material-symbols-location-on-rounded" /> 3F Grayline Ventures Bldg. 14 Arayat St., Brgy. Malamig, Mandaluyong, Philippines</p>
+							<p><i className="text-base mr-1 i-[material-symbols--alternate-email-rounded]" /> <a className="underline" href={`mailto:${email}`}>{email}</a> </p>
+							<p><i className="text-base mr-1 i-[material-symbols--call]" /> 8-723-4894/8-725-7031</p>
+							<p><i className="text-base mr-1 i-[material-symbols--location-on-rounded]" /> 3F Grayline Ventures Bldg. 14 Arayat St., Brgy. Malamig, Mandaluyong, Philippines</p>
 							<div className="flex gap-x-2 pt-1 footer-icons">
 								<a href="https://www.facebook.com/profile.php?id=100094323159645">
 									<Image className="w-10" src={FacebookLogo} alt="white f inside a dark blue circle" />

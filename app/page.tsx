@@ -8,11 +8,11 @@ export default function Home() {
 	return (
 		<>
 			<section className="md:min-h-[600px] grid-rows-[1fr_2fr] sm:grid-rows-2 lg:grid-rows-1 grid relative">
-				<Pipe2 className="top-[5%] xl:top-[10%] left-0 absolute w-48 opacity-50 lt-lg:hidden" />
-				<Pixel className="bottom-0 left-0 absolute rotate-180 w-40 xl:w-48 opacity-50 lt-lg:hidden" />
-				<Pipe2 className="bottom-20 right-0 lg:left-[35%] absolute rotate-180 w-48 opacity-50 lt-lg:hidden" />
+				<Pipe2 className="top-[5%] xl:top-[10%] left-0 absolute w-48 opacity-50 max-lg:hidden" />
+				<Pixel className="bottom-0 left-0 absolute rotate-180 w-40 xl:w-48 opacity-50 max-lg:hidden" />
+				<Pipe2 className="bottom-20 right-0 lg:left-[35%] absolute rotate-180 w-48 opacity-50 max-lg:hidden" />
 				<div className="grid static lg:absolute w-full h-full lg:grid-cols-[5fr_7fr]">
-					<div className="lt-lg:hidden"></div>
+					<div className="max-lg:hidden"></div>
 					<div className={styles.slice}>
 						<figure>
 							<Image src={homebg} alt="brother printer" className="w-full h-full bottom-0 object-bottom object-cover" />
@@ -31,14 +31,14 @@ export default function Home() {
 					<h1 className="head-1 text-white text-center mb-8 md:mb-12">Our Products</h1>
 					<div className="grid md:grid-cols-2 text-center max-w-4xl mx-auto gap-8">
 						<div className={styles.col}>
-							<Circle className="absolute w-32 -left-18 lg:w-40 lg:-left-24 opacity-50 -rotate-80 -z-1" />
+							<Circle className="absolute w-32 -left-18 lg:w-40 lg:-left-24 opacity-50 -rotate-[60deg] -z-1" />
 							<div className={styles.card}>
 								<figure>
 									{/* <Image /> */}
 								</figure>
 								<h2>Machines</h2>
 							</div>
-							<Link className={styles['transparent-btn']} href="/products">View More</Link>
+							<Link className={styles['transparent-btn']} href="/machines">View More</Link>
 						</div>
 						<div className={styles.col}>
 							<div className={styles.card}>
@@ -47,7 +47,7 @@ export default function Home() {
 								</figure>
 								<h2>Toners and Ink</h2>
 							</div>
-							<Link className={styles['transparent-btn']} href="/products">View More</Link>
+							<Link className={styles['transparent-btn']} href="/toners-ink">View More</Link>
 						</div>
 					</div>
 				</div>
@@ -66,10 +66,10 @@ export default function Home() {
 					<div className="self-center text-center md:text-right">
 						<h1 className="head-1 text-secondary-900">We offer a wide range of services</h1>
 						<p className="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus incidunt, earum repellat explicabo ipsa debitis nam quisquam vero totam iure error exercitationem architecto ad nihil hic eos autem eius tempora?</p>
-						<Link href="/services" className="btn highlight has-icons mt-4">Learn More <span className="i-material-symbols-arrow-forward-rounded" /></Link>
+						<Link href="/services" className="btn highlight has-icons mt-4">Learn More <i className="i-[material-symbols--arrow-forward-rounded] text-xl" /></Link>
 					</div>
 				</div>
-				<div className="absolute w-full bottom-0 lt-md:hidden">
+				<div className="absolute w-full bottom-0 max-md:hidden">
 					<Wave />
 				</div>
 			</section >

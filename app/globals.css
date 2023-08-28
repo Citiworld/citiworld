@@ -1,97 +1,106 @@
-@import '@unocss/reset/tailwind.css';
-@unocss all;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.head-1 {
-	@apply text-4xl leading-10 sm:(text-5xl leading-14) font-bold;
+@layer base {
+	i {
+		@apply align-middle;
+	}
 
-	&+.subtitle {
-		@apply max-w-prose font-secondary mt-6 text-lg leading-8;
+	nav a {
+		@apply hover:text-secondary-500 transition-colors;
+
+			&[data-active] {
+			@apply border-l-primary-900;
+		}
+	}
+
+	nav.desktop a {
+		@apply flex items-center border-y-4 border-transparent px-1;
+
+		&.active {
+			@apply border-b-primary-900;
+		}
 	}
 }
 
-.head-2 {
-	@apply text-3xl leading-8 sm:(text-4xl leading-10) font-bold;
-}
+@layer components {
+	.head-1 {
+		@apply text-4xl leading-10 sm:text-5xl sm:leading-14 font-bold;
 
-footer {
-	@apply relative px-4 sm:px-unset;
-	box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.container {
-	@apply px-4 mx-auto;
-}
-
-.btn {
-	@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors cursor-pointer outline-0.5 outline-offset-3 outline-secondary-400;
-
-	&.has-icons {
-		@apply inline-flex items-center gap-x-1.5;
+		&+.subtitle {
+			@apply max-w-prose font-secondary mt-6 text-lg leading-8;
+		}
 	}
 
-	&:disabled {
-		@apply cursor-not-allowed;
+	.head-2 {
+		@apply text-3xl leading-8 sm:text-4xl sm:leading-10 font-bold;
 	}
 
-	&.highlight {
-		@apply bg-highlight-400 text-white [&:not([disabled])]:(active:bg-highlight-600 hover:bg-highlight-500) disabled:(text-highlight-700 bg-highlight-200);
+	footer {
+		@apply relative px-4 sm:px-unset;
+		box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
 	}
-}
 
-.btn-highlight {
-	@apply bg-highlight-400 text-white [&:not([disabled])]:(active:bg-highlight-600 hover:bg-highlight-500) disabled:(text-highlight-700 bg-highlight-200);
-}
-
-.footer-icons > a {
-	@apply transition-transform active:scale-105 hover:scale-110;
-}
-
-nav a {
-	@apply hover:text-secondary-500 transition-colors;
-
-		&[data-active] {
-		@apply border-l-primary-900
+	.container {
+		@apply px-4 mx-auto;
 	}
-}
 
-nav.desktop a {
-	@apply flex items-center border-y-4 border-transparent px-1;
+	.btn {
+		@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors cursor-pointer outline-0.5 outline-offset-3 outline-secondary-400;
 
-	&.active {
-		@apply border-b-primary-900;
+		&.has-icons {
+			@apply inline-flex items-center gap-x-1.5;
+		}
+
+		&:disabled {
+			@apply cursor-not-allowed;
+		}
+
+		&.highlight {
+			@apply bg-highlight-400 text-white enabled:active:bg-highlight-600 enabled:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+		}
 	}
-}
 
-.text-gradient {
-	@apply bg-clip-text;
-	-webkit-text-fill-color: transparent;
-}
+	.btn-highlight {
+		@apply bg-highlight-400 text-white enabled:active:bg-highlight-600 enabled:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+	}
 
-.lds-ring {
-  @apply relative inline-block aspect-square;
-}
+	.footer-icons > a {
+		@apply transition-transform active:scale-105 hover:scale-110;
+	}
 
-.lds-ring div {
-  @apply box-border block absolute aspect-square border-4 border-solid rounded-full h-full;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
+	.text-gradient {
+		@apply bg-clip-text;
+		-webkit-text-fill-color: transparent;
+	}
 
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
+	.lds-ring {
+		@apply relative inline-block aspect-square;
+	}
 
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	.lds-ring div {
+		@apply box-border block absolute aspect-square border-4 border-solid rounded-full h-full;
+		animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	.lds-ring div:nth-child(1) {
+		animation-delay: -0.45s;
+	}
+	.lds-ring div:nth-child(2) {
+		animation-delay: -0.3s;
+	}
+	.lds-ring div:nth-child(3) {
+		animation-delay: -0.15s;
+	}
+
+	@keyframes lds-ring {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 }
