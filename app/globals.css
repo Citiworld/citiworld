@@ -26,7 +26,7 @@
 
 @layer components {
 	.head-1 {
-		@apply text-4xl leading-10 sm:text-5xl sm:leading-14 font-bold;
+		@apply text-4xl leading-10 sm:text-5xl sm:leading-14 font-bold font-primary;
 
 		&+.subtitle {
 			@apply max-w-prose font-secondary mt-6 text-lg leading-8;
@@ -34,7 +34,7 @@
 	}
 
 	.head-2 {
-		@apply text-3xl leading-8 sm:text-4xl sm:leading-10 font-bold;
+		@apply text-3xl leading-8 sm:text-4xl sm:leading-10 font-bold font-primary;
 	}
 
 	footer {

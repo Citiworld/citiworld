@@ -25,11 +25,11 @@
 }
 
 .card > h2 {
-	@apply text-2xl font-bold py-2.5;
+	@apply text-2xl font-bold py-2.5 font-primary tracking-wider;
 }
 
 .transparent-btn {
-	@apply border rounded-md px-5 py-1 inline-block mt-8 hover:bg-white hover:text-primary-900 transition-colors;
+	@apply border font-secondary rounded-md px-5 py-1 inline-block mt-8 hover:bg-white hover:text-primary-900 transition-colors;
 }
 
 .service-grid {
