@@ -7,6 +7,10 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		container: {
+			center: true,
+			padding: '1rem'
+		},
 		extend: {
 			fontFamily: {
 				primary: 'var(--font-primary)',

@@ -7,6 +7,10 @@
 		@apply align-middle;
 	}
 
+	body {
+		@apply font-secondary;
+	}
+
 	nav a {
 		@apply hover:text-secondary-500 transition-colors;
 
@@ -42,10 +46,6 @@
 		box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
 	}
 
-	.container {
-		@apply px-4 mx-auto;
-	}
-
 	.btn {
 		@apply rounded-full px-4 py-2 inline-block font-secondary transition-colors cursor-pointer outline-0.5 outline-offset-3 outline-secondary-400;
 
@@ -58,12 +58,12 @@
 		}
 
 		&.highlight {
-			@apply bg-highlight-400 text-white enabled:active:bg-highlight-600 enabled:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+			@apply bg-highlight-400 text-white [&:not(disabled)]:active:bg-highlight-600 [&:not(disabled)]:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
 		}
 	}
 
 	.btn-highlight {
-		@apply bg-highlight-400 text-white enabled:active:bg-highlight-600 enabled:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+		@apply bg-highlight-400 text-white [&:not(disabled)]:active:bg-highlight-600 [&:not(disabled)]:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
 	}
 
 	.footer-icons > a {
