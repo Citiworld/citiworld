@@ -9,7 +9,7 @@ services:
   image: /placeholder/fixing.png
   cap: hand holding a screwdriver to fix a printer
   services:
-    - name: Service 1
+    - name: Service One
       description: >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
@@ -56,6 +56,7 @@ about:
     - caption: A brother printer
       image: /placeholder/fixing.png
 ---
+
 
 
 
