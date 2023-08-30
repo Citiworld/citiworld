@@ -11,9 +11,6 @@ dependencies:
   '@tinacms/cli':
     specifier: ^1.5.29
     version: 1.5.29(@babel/core@7.22.11)(@types/node@20.5.3)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
-  dotenv:
-    specifier: ^16.3.1
-    version: 16.3.1
   next:
     specifier: 13.4.19
     version: 13.4.19(@babel/core@7.22.11)(react-dom@18.2.0)(react@18.2.0)

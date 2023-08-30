@@ -1,6 +1,7 @@
 import { Wave } from '@/components/assets'
 import { InfoLayout } from '@/components/layouts'
 import client from '@/tina/__generated__/client'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
 
@@ -11,6 +12,10 @@ async function getData() {
 	} catch (err) {
 		console.error(err)
 	}
+}
+
+export const metadata: Metadata = {
+	title: 'About'
 }
 
 export default async function AboutPage() {

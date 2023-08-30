@@ -3,7 +3,7 @@ declare global {
 		interface ProcessEnv {
 			MAIL_USER: string
 			MAIL_PASS: string
-			TINA_CLIENT_ID: string
+			NEXT_PUBLIC_TINA_CLIENT_ID: string
 			TINA_TOKEN: string
 		}
 	}
