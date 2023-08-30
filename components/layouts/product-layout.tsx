@@ -1,4 +1,4 @@
-import { BackButton } from "@/components/back-button"
+import { BackButton } from "@/components/nav-button"
 import Image from "next/image"
 
 type Product = {
