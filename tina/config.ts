@@ -1,7 +1,9 @@
 import { defineConfig } from 'tinacms'
 import dotenv from 'dotenv'
 
-dotenv.config({ path: `.env.local` })
+if (typeof process.cwd === "function") {
+	dotenv.config({ path: `.env.local` })
+}
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
@@ -45,16 +47,16 @@ export default defineConfig({
 								required: true,
 							},
 							{
-								type: 'string',
-								name: 'caption',
-								label: 'Image caption',
-								required: true,
-							},
-							{
 								type: 'image',
 								name: 'image',
 								label: 'Image',
 								required: true,
+							},
+							{
+								type: 'string',
+								name: 'cap',
+								label: 'Image label',
+								required: true
 							},
 							{
 								type: 'object',

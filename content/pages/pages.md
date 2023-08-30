@@ -6,8 +6,8 @@ services:
     maiores labore veritatis perferendis laboriosam doloribus aspernatur
     molestiae! Natus eveniet consequuntur quasi suscipit, enim soluta eum quod
     optio distinctio?
-  alt: hand holding a screwdriver to fix a printer
   image: /placeholder/fixing.png
+  cap: hand holding a screwdriver to fix a printer
   services:
     - name: Service 1
       description: >
@@ -34,6 +34,8 @@ about:
   description: |
     Another testing
 ---
+
+
 
 
 

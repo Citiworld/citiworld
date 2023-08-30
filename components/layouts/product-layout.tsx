@@ -24,7 +24,7 @@ export function ProductLayout({ product }: ProductLayoutProps) {
 				<div className="container grid grid-cols-2">
 					<aside>
 						<figure>
-							<Image src="" />
+							{/* <Image src="" /> */}
 						</figure>
 					</aside>
 					<article>
