@@ -103,6 +103,58 @@ export default defineConfig({
 								label: 'Page description',
 								required: true,
 							},
+							{
+								type: 'image',
+								name: 'image',
+								label: 'Image',
+								required: true,
+							},
+							{
+								type: 'string',
+								name: 'cap',
+								label: 'Image label',
+								required: true
+							},
+							{
+								type: 'rich-text',
+								name: 'mission',
+								label: 'Mission',
+								required: true,
+							},
+							{
+								type: 'rich-text',
+								name: 'vision',
+								label: 'Vision',
+								required: true,
+							},
+							{
+								type: 'object',
+								name: 'images',
+								label: 'Images',
+								list: true,
+								required: true,
+								fields: [
+									{
+										type: 'string',
+										name: 'caption',
+										label: 'Caption',
+										required: true,
+									},
+									{
+										type: 'image',
+										name: 'image',
+										label: 'Image',
+										required: true,
+									},
+								],
+								ui: {
+									itemProps(item) {
+										return { label: item.caption }
+									},
+									min: 3,
+									max: 3,
+								}
+							}
 						]
 					}
 				],
