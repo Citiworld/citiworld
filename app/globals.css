@@ -58,12 +58,12 @@
 		}
 
 		&.highlight {
-			@apply bg-highlight-400 text-white [&:not(disabled)]:active:bg-highlight-600 [&:not(disabled)]:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+			@apply bg-primary-800 text-white [&:not(disabled)]:active:bg-primary-950 [&:not(disabled)]:hover:bg-primary-900 disabled:text-primary-900 disabled:bg-primary-200;
 		}
 	}
 
 	.btn-highlight {
-		@apply bg-highlight-400 text-white [&:not(disabled)]:active:bg-highlight-600 [&:not(disabled)]:hover:bg-highlight-500 disabled:text-highlight-700 disabled:bg-highlight-200;
+		@apply bg-primary-800 text-white [&:not(disabled)]:active:bg-primary-950 [&:not(disabled)]:hover:bg-primary-900 disabled:text-primary-900 disabled:bg-primary-200;
 	}
 
 	.footer-icons > a {

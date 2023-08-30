@@ -66,7 +66,7 @@ export default function Home() {
 					<div className="self-center text-center md:text-right">
 						<h1 className="head-1 text-secondary-900">We offer a wide range of services</h1>
 						<p className="subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus incidunt, earum repellat explicabo ipsa debitis nam quisquam vero totam iure error exercitationem architecto ad nihil hic eos autem eius tempora?</p>
-						<Link href="/services" className="btn highlight has-icons mt-4">Learn More <i className="i-[material-symbols--arrow-forward-rounded] text-xl" /></Link>
+						<Link href="/services" className="btn highlight has-icons mt-4">Our Services <i className="i-[material-symbols--arrow-forward-rounded] text-xl" /></Link>
 					</div>
 				</div>
 				<div className="absolute w-full bottom-0 max-md:hidden">

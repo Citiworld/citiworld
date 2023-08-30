@@ -11,7 +11,7 @@ export default function ContactPage() {
 			<div>
 				<ContactForm />
 				<div>
-					<iframe className="w-full h-full" src="https://www.google.com/maps/embed/v1/place?q=Citiworld,+Grayline+ventures,+Arayat,+Mandaluyong,+Metro+Manila,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" />
+					<iframe title="our google maps location" className="w-full h-full" src="https://www.google.com/maps/embed/v1/place?q=Citiworld,+Grayline+ventures,+Arayat,+Mandaluyong,+Metro+Manila,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" />
 				</div>
 			</div>
 		</section>
