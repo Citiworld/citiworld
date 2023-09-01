@@ -1,0 +1,19 @@
+.description {
+	@apply mt-6 text-primary-950 text-lg;
+
+	& ul {
+		@apply list-disc ml-4 space-y-1;
+	}
+}
+
+.swiper {
+	:global(.thumbs) {
+		:global(.swiper-slide) {
+			@apply cursor-pointer border-2 transition-colors;
+		}
+
+		:global(.swiper-slide-active) {
+			@apply border-primary-500 border-solid;
+		}
+	}
+}
