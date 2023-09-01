@@ -10,7 +10,7 @@ services:
     src: /placeholder/fixing.png
     alt: hand holding a screwdriver to fix a printer
   services:
-    - name: Service 1
+    - name: Service One
       description: >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
