@@ -26,6 +26,9 @@ dependencies:
   sharp:
     specifier: ^0.32.5
     version: 0.32.5
+  swiper:
+    specifier: ^10.2.0
+    version: 10.2.0
   tinacms:
     specifier: ^1.5.20
     version: 1.5.20(@babel/core@7.22.11)(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
@@ -12706,6 +12709,11 @@ packages:
     resolution: {integrity: sha512-kc6S2YS/2yXbtkSMunBtKdah4VFETZ8Oh6ONSmSd9bRxhqTrtARUCBUiWXH3xVPpvR7tz2CSnkuXVE42EcGnMw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /swiper@10.2.0:
+    resolution: {integrity: sha512-nktQsOtBInJjr3f5DicxC8eHYGcLXDVIGPSon0QoXRaO6NjKnATCbQ8SZsD3dN1Ph1RH4EhVPwSYCcuDRFWHGQ==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /tabbable@6.2.0:
