@@ -1,4 +1,5 @@
 import { defineConfig } from 'tinacms'
+import { imageArraySchema, imageSchema } from './schema/image'
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
@@ -41,18 +42,7 @@ export default defineConfig({
 								label: 'Page description',
 								required: true,
 							},
-							{
-								type: 'image',
-								name: 'image',
-								label: 'Image',
-								required: true,
-							},
-							{
-								type: 'string',
-								name: 'cap',
-								label: 'Image label',
-								required: true
-							},
+							imageSchema,
 							{
 								type: 'object',
 								name: 'services',
@@ -98,18 +88,7 @@ export default defineConfig({
 								label: 'Page description',
 								required: true,
 							},
-							{
-								type: 'image',
-								name: 'image',
-								label: 'Image',
-								required: true,
-							},
-							{
-								type: 'string',
-								name: 'cap',
-								label: 'Image label',
-								required: true
-							},
+							imageSchema,
 							{
 								type: 'rich-text',
 								name: 'mission',
@@ -123,29 +102,9 @@ export default defineConfig({
 								required: true,
 							},
 							{
-								type: 'object',
-								name: 'images',
-								label: 'Images',
-								list: true,
-								required: true,
-								fields: [
-									{
-										type: 'string',
-										name: 'caption',
-										label: 'Caption',
-										required: true,
-									},
-									{
-										type: 'image',
-										name: 'image',
-										label: 'Image',
-										required: true,
-									},
-								],
+								...imageArraySchema,
 								ui: {
-									itemProps(item) {
-										return { label: item.caption }
-									},
+									...imageArraySchema.ui,
 									min: 3,
 									max: 3,
 								}
@@ -185,17 +144,20 @@ export default defineConfig({
 						required: true,
 					},
 					{
+						...imageArraySchema,
+						ui: {
+							...imageArraySchema.ui,
+							min: 1
+						}
+					},
+					{
 						type: 'rich-text',
 						name: 'description',
 						label: 'Description',
 						isBody: true,
 						required: true,
-					},
+					},		
 				],
-				ui: {
-					// This is an DEMO router. You can remove this to fit your site
-					router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-				},
 			},
 		],
 	},

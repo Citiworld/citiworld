@@ -29,7 +29,7 @@ export default async function AboutPage() {
 	const imgClassName = 'object-cover'
 
 	return (
-		<InfoLayout title={data.title} description={<TinaMarkdown content={data.description} />} imgSrc={data.image} caption={data.cap}>
+		<InfoLayout title={data.title} description={<TinaMarkdown content={data.description} />} imgSrc={data.image.src} caption={data.image.alt}>
 			<div className="container max-w-screen-xl space-y-20 text-xl/loose pt-12 pb-32 sm:pb-52 xl:pt-32 xl:pb-60">
 				<article className="text-left xl:text-right max-w-prose m-auto xl:mr-unset">
 					<h2 className="head-1 text-secondary-900 tracking-wide mb-2">Our Mission</h2>
@@ -42,13 +42,13 @@ export default async function AboutPage() {
 			</div>
 			<div className="absolute bottom-20 -translate-x-10 flex flex-col flex-wrap h-[700px] justify-center gap-8">
 				<figure className={figClassName}>
-					<Image src={data.images[0].image} alt={data.images[0].caption} fill className={imgClassName} />
+					<Image src={data.images[0].src} alt={data.images[0].alt} fill className={imgClassName} />
 				</figure>
 				<figure className={figClassName}>
-					<Image src={data.images[1].image} alt={data.images[1].caption} fill className={imgClassName} />
+					<Image src={data.images[1].src} alt={data.images[1].alt} fill className={imgClassName} />
 				</figure>
 				<figure className={figClassName}>
-					<Image src={data.images[2].image} alt={data.images[2].caption} fill className={imgClassName} />
+					<Image src={data.images[2].src} alt={data.images[2].alt} fill className={imgClassName} />
 				</figure>
 			</div>
 			<Wave className="translate-y-18 md:translate-y-36 absolute bottom-0 -z-1" />

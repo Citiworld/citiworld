@@ -24,7 +24,7 @@ export default async function ServicePage() {
 	}
 
 	return (
-		<InfoLayout title={data.title} imgSrc={data.image} description={<TinaMarkdown content={data.description} />} caption={data.cap}>
+		<InfoLayout title={data.title} imgSrc={data.image.src} description={<TinaMarkdown content={data.description} />} caption={data.image.alt}>
 			<div className="container max-w-screen-xl [&_p:not(.head-1)]:md:text-xl space-y-20">
 				{data.services.map(s =>
 					<div key={s.name} className="flex gap-x-4 lg:gap-x-8">
