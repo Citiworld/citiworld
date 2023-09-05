@@ -1,20 +1,19 @@
 import { BackButton } from "@/components/nav-button"
 import { formatPrice } from "@/lib/utils"
 import styles from './product-view.module.css'
-import { ProductSwiper } from "../product-swiper"
-import { ImageSchema } from "@/tina/schema/image"
+
 
 type ProductLayoutProps = {
 	product: {
 		name: string
 		brand: string
 		price: number
-		images: Array<ImageSchema>
 	}
+	preview: React.ReactNode
 	children: React.ReactNode
 }
 
-export function ProductLayout({ product, children }: ProductLayoutProps) {
+export function ProductLayout({ product, preview, children }: ProductLayoutProps) {
 	return (
 		<>
 			<div className="container mt-8 max-w-screen-xl">
@@ -27,7 +26,7 @@ export function ProductLayout({ product, children }: ProductLayoutProps) {
 				<div className="container grid grid-cols-1 md:grid-cols-10 gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-10 max-w-screen-xl">
 					<aside className={`${styles.swiper} md:col-span-5 lg:col-span-4`}>
 						<div className="max-md:max-w-sm mx-auto">
-							<ProductSwiper images={product.images} />
+							{preview}
 						</div>
 					</aside>
 					<article className="text-secondary-900 md:col-span-5 lg:col-span-6 place-self-center">

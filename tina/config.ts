@@ -156,9 +156,48 @@ export default defineConfig({
 						label: 'Description',
 						isBody: true,
 						required: true,
-					},		
+					},
 				],
 			},
+			{
+				name: 'Toner',
+				label: 'Toners and Ink',
+				path: 'content/toners-ink',
+				fields: [
+					{
+						type: 'string',
+						name: 'name',
+						label: 'Name',
+						isTitle: true,
+						required: true,
+					},
+					{
+						type: 'string',
+						name: 'brand',
+						label: 'Brand',
+						required: true,
+					},
+					{
+						type: 'number',
+						name: 'price',
+						label: 'Price',
+						required: true,
+					},
+					imageSchema,
+					{
+						type: 'string',
+						name: 'url',
+						label: 'URL',
+					},
+					{
+						type: 'rich-text',
+						name: 'description',
+						label: 'Description',
+						isBody: true,
+						required: true,
+					},
+				]
+			}
 		],
 	},
 });

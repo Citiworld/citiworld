@@ -2,12 +2,10 @@ import { Product } from '@/components/product'
 import { ProductsLayout } from '@/components/layouts/product-list-layout'
 import { SearchForm } from '@/components/search-form'
 import client from '@/tina/__generated__/client'
+import { Metadata } from 'next'
+import { filterFalsy } from '@/lib/utils'
 
-function filterFalsy<T>(item?: T | null): item is T {
-	return !!item;
-}
-
-async function getData() {
+export async function getPrinters() {
 	try {
 		const res = await client.queries.PrinterConnection()
 		const printers = res.data.PrinterConnection.edges?.map(printer => printer?.node)
@@ -18,16 +16,21 @@ async function getData() {
 	}
 }
 
-export default async function ProductPage() {
-	const data = await getData()
+export const metadata: Metadata = {
+	title: 'Machines',
+	description: 'The catalog of printers that CitiWorld offers.'
+}
 
-	if (!data) {
+export default async function ProductPage() {
+	const printers = await getPrinters()
+
+	if (!printers) {
 		throw new Error('server error')
 	}
 
 	return (
 		<ProductsLayout title="Machines" form={<SearchForm />}>
-			{data.map(printer =>
+			{printers.map(printer =>
 				<Product key={printer.id}
 					src={printer.images[0].src}
 					alt={printer.images[0].alt}
