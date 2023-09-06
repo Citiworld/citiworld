@@ -4,6 +4,7 @@ import { client } from '@/tina/__generated__/client'
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 import { ProductSwiper } from "@/components/product-swiper"
 import { getPrinters } from "../page"
+import Link from "next/link"
 
 export const dynamicParams = false
 
@@ -35,7 +36,7 @@ export default async function PrinterPage({ params }: PrinterPageProps) {
 	return (
 		<ProductLayout product={printer} preview={<ProductSwiper images={printer.images} />}>
 			<TinaMarkdown content={printer.description} />
-			<button className="btn highlight w-full mt-8">Inquire Now</button>
+			<Link href={`/contact-us?subject=${printer.name}`} className="btn highlight w-full mt-8 text-center">Inquire Now</Link>
 		</ProductLayout>
 	)
 }

@@ -32,7 +32,7 @@ export default async function ServicePage() {
 						<div>
 							<p className="head-1 text-secondary-900 tracking-wider mb-2">{s.name}</p>
 							<TinaMarkdown content={s.description} />
-							<Link className="btn highlight has-icons px-8 mt-6" href="/contact-us">
+							<Link className="btn highlight has-icons px-8 mt-6" href={`/contact-us?subject=${s.name} Inquiry`}>
 								Inquire now <i className="i-[material-symbols--arrow-forward] text-xl" />
 							</Link>
 						</div>

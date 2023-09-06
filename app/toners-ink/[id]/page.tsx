@@ -4,12 +4,12 @@ import { client } from '@/tina/__generated__/client'
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 import Image from "next/image"
 import { getToners } from "../page"
+import Link from "next/link"
 
 export const dynamicParams = false
 
 export async function generateStaticParams() {
 	const toners = await getToners()
-	console.log(toners)
 	return toners?.map(t => ({ id: t._sys.filename })) ?? []
 }
 
@@ -39,7 +39,9 @@ export default async function TonerPage({ params }: TonerPageProps) {
 			preview={<Image className="shadow-xl object-cover rounded block" src={toner.image.src} alt={toner.image.alt} width={600} height={600} />}
 		>
 			<TinaMarkdown content={toner.description} />
-			<button className="btn highlight w-full mt-8">Inquire Now</button>
+			<Link href={toner.url ?? `/contact-us?subject=${toner.name}`} className="btn highlight w-full mt-8 text-center">
+				{toner.url ? 'Buy now' : 'Inquire Now'}
+			</Link>
 		</ProductLayout>
 	)
 }
