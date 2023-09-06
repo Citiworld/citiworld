@@ -21,7 +21,7 @@
 }
 
 .card > figure {
-	@apply bg-white h-60;
+	@apply bg-white h-60 relative;
 }
 
 .card > h2 {

@@ -5,6 +5,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import Image from "next/image"
 import { getToners } from "../page"
 import Link from "next/link"
+import { Metadata, ResolvingMetadata } from "next"
 
 export const dynamicParams = false
 
@@ -26,6 +27,23 @@ type TonerPageProps = {
 	params: {
 		id: string
 	}
+}
+
+export async function generateMetadata({ params }: TonerPageProps, parent: ResolvingMetadata): Promise<Metadata> {
+
+	const toner = await getToner(params)
+
+	if (!toner) notFound()
+
+	const prevImages = (await parent).openGraph?.images || []
+
+	return {
+		title: toner.name,
+		description: toner.description,
+		openGraph: {
+			images: [toner.image.src, ...prevImages],
+		}
+	} as Metadata
 }
 
 export default async function TonerPage({ params }: TonerPageProps) {

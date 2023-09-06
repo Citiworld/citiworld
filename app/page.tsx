@@ -3,8 +3,21 @@ import styles from './home.module.css'
 import { Wave, Circle, Pixel, Gear, Pipe, Pipe2 } from '@/components/assets'
 import homebg from '@/public/placeholder/home-bg.png'
 import Image from 'next/image'
+import client from '@/tina/__generated__/client'
 
-export default function Home() {
+async function getPrinter() {
+	const res = await client.queries.PrinterConnection()
+	return res.data.PrinterConnection.edges?.[0]?.node
+}
+
+async function getToner() {
+	const res = await client.queries.TonerConnection()
+	return res.data.TonerConnection.edges?.[0]?.node
+}
+
+export default async function Home() {
+	const [printer, toner] = await Promise.all([getPrinter(), getToner()])
+
 	return (
 		<>
 			<section className="md:min-h-[600px] grid-rows-[1fr_2fr] sm:grid-rows-2 lg:grid-rows-1 grid relative">
@@ -34,7 +47,9 @@ export default function Home() {
 							<Circle className="absolute w-32 -left-18 lg:w-40 lg:-left-24 opacity-50 -rotate-[60deg] -z-1" />
 							<div className={styles.card}>
 								<figure>
-									{/* <Image /> */}
+									{printer?.images &&
+										<Image src={printer.images[0].src} alt={printer.images[0].alt} fill className="w-full h-full object-cover" />
+									}
 								</figure>
 								<h2>Machines</h2>
 							</div>
@@ -43,7 +58,9 @@ export default function Home() {
 						<div className={styles.col}>
 							<div className={styles.card}>
 								<figure>
-									{/* <Image /> */}
+									{toner?.image &&
+										<Image src={toner?.image.src} alt={toner?.image.alt} fill className="w-full h-full object-cover" />
+									}
 								</figure>
 								<h2>Toners and Ink</h2>
 							</div>

@@ -1,6 +1,5 @@
 import { Product } from '@/components/product'
 import { ProductsLayout } from '@/components/layouts/product-list-layout'
-import { SearchForm } from '@/components/search-form'
 import client from '@/tina/__generated__/client'
 import { Metadata } from 'next'
 import { filterFalsy } from '@/lib/utils'
@@ -29,7 +28,7 @@ export default async function ProductPage() {
 	}
 
 	return (
-		<ProductsLayout title="Toners and Ink" form={<SearchForm />}>
+		<ProductsLayout title="Toners and Ink">
 			{toners.map(toner =>
 				<Product key={toner.id}
 					src={toner.image.src}

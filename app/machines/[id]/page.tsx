@@ -5,6 +5,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import { ProductSwiper } from "@/components/product-swiper"
 import { getPrinters } from "../page"
 import Link from "next/link"
+import { Metadata, ResolvingMetadata } from "next"
 
 export const dynamicParams = false
 
@@ -27,6 +28,24 @@ type PrinterPageProps = {
 		id: string
 	}
 }
+
+export async function generateMetadata({ params }: PrinterPageProps, parent: ResolvingMetadata): Promise<Metadata> {
+
+	const toner = await getPrinter(params)
+
+	if (!toner) notFound()
+
+	const prevImages = (await parent).openGraph?.images || []
+
+	return {
+		title: toner.name,
+		description: toner.description,
+		openGraph: {
+			images: [toner.images[0].src, ...prevImages],
+		}
+	} as Metadata
+}
+
 
 export default async function PrinterPage({ params }: PrinterPageProps) {
 	const printer = await getPrinter(params)
