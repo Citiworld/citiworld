@@ -2,10 +2,12 @@
 import { FormEventHandler, useState } from 'react'
 import styles from './contact-us.module.css'
 import { LoadingButton } from '@/components/loading-button'
+import { useSearchParams } from 'next/navigation'
 
 export function ContactForm() {
 	const [error, setError] = useState('')
 	const [isLoading, setIsLoading] = useState(false)
+	const searchParams = useSearchParams()
 
 	const handleSubmit: FormEventHandler = async e => {
 		e.preventDefault()
@@ -18,16 +20,16 @@ export function ContactForm() {
 			const email = data.get('email')
 			const subject = data.get('subject')
 			const body = data.get('body')
-	
+
 			if (!name || !email || !subject || !body) return setError('Missing field values.')
-	
+
 			const res = await fetch('/contact-us/api', {
 				method: 'POST',
 				body: data
 			})
 
-			if (!res.ok) return setError('An error has occurred. Please try again.')
-	
+			if (!res.ok) return setError(`An error has occurred. Please try again. ${res.status}`)
+
 			const { error } = await res.json()
 			if (error) return setError(error)
 			form.reset()
@@ -52,7 +54,7 @@ export function ContactForm() {
 			</div>
 			<div className={styles.control}>
 				<label htmlFor="subject">Subject</label>
-				<input required onChange={clearError} type="text" name="subject" id="subject" />
+				<input required onChange={clearError} type="text" name="subject" id="subject" defaultValue={searchParams.get('subject') ?? ''} />
 			</div>
 			<div className={styles.control}>
 				<label htmlFor="body">Body</label>
