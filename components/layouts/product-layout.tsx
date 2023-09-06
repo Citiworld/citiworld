@@ -1,6 +1,6 @@
-import { BackButton } from "@/components/nav-button"
 import { formatPrice } from "@/lib/utils"
 import styles from './product-view.module.css'
+import Link from "next/link"
 
 
 type ProductLayoutProps = {
@@ -17,9 +17,9 @@ export function ProductLayout({ product, preview, children }: ProductLayoutProps
 	return (
 		<>
 			<div className="container mt-8 max-w-screen-xl">
-				<BackButton className="text-secondary-900 hover:text-secondary-950 font-secondary font-medium text-xl transition-colors">
+				<Link href="." className="text-secondary-900 hover:text-secondary-950 font-secondary font-medium text-xl transition-colors">
 					<i className="i-[material-symbols--arrow-back]" /> Back
-				</BackButton>
+				</Link>
 			</div>
 
 			<section className="my-8">
