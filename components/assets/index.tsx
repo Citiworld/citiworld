@@ -9,27 +9,27 @@ import wave from '@/public/assets/wave.svg'
 type AssetProps = Omit<React.ComponentProps<typeof Image>, 'alt' | 'src'>
 
 export function Circle(props: AssetProps) {
-	return <Image src={circle} alt="wave gradient" {...props} />
+	return <Image src={circle} alt="" {...props} />
 }
 
 export function Gear(props: AssetProps) {
-	return <Image src={gear} alt="two white gears on top of each other" {...props} />
+	return <Image src={gear} alt="" {...props} />
 }
 
 export function Pipe(props: AssetProps) {
-	return <Image src={pipe} alt="three finger-link shapes of the same height" {...props} />
+	return <Image src={pipe} alt="" {...props} />
 }
 
 export function Pipe2(props: AssetProps) {
-	return <Image src={pipe2} alt="two finger-like shapes" {...props} />
+	return <Image src={pipe2} alt="" {...props} />
 }
 
 
 export function Pixel(props: AssetProps) {
-	return <Image src={pixel} alt="square tiles of different colors together" {...props} />
+	return <Image src={pixel} alt="" {...props} />
 }
 
 export function Wave(props: AssetProps) {
-	return <Image src={wave} alt="wavy shape that is filled with gradient color" {...props} />
+	return <Image src={wave} alt="" {...props} />
 }
 
