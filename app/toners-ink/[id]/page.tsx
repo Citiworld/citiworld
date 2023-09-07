@@ -1,11 +1,8 @@
 import { notFound } from "next/navigation"
-import { ProductLayout } from "@/components/layouts/product-layout"
 import { client } from '@/tina/__generated__/client'
-import { TinaMarkdown } from "tinacms/dist/rich-text"
-import Image from "next/image"
 import { getToners } from "../page"
-import Link from "next/link"
 import { Metadata, ResolvingMetadata } from "next"
+import { TonerPage } from "./toner-page"
 
 export const dynamicParams = false
 
@@ -16,8 +13,7 @@ export async function generateStaticParams() {
 
 async function getToner({ id }: TonerPageProps['params']) {
 	try {
-		const product = await client.queries.Toner({ relativePath: `${id}.md` })
-		return product.data.Toner
+		return await client.queries.Toner({ relativePath: `${id}.md` })
 	} catch (error) {
 		return undefined
 	}
@@ -36,30 +32,23 @@ export async function generateMetadata({ params }: TonerPageProps, parent: Resol
 	if (!toner) notFound()
 
 	const prevImages = (await parent).openGraph?.images || []
+	const data = toner.data.Toner
 
 	return {
-		title: toner.name,
-		description: toner.description,
+		title: data.name,
+		description: data.description,
 		openGraph: {
-			images: [toner.image.src, ...prevImages],
+			images: [data.image.src, ...prevImages],
 		}
 	} as Metadata
 }
 
-export default async function TonerPage({ params }: TonerPageProps) {
+export default async function Page({ params }: TonerPageProps) {
 	const toner = await getToner(params)
 
 	if (!toner) notFound()
 
 	return (
-		<ProductLayout
-			product={toner}
-			preview={<Image className="shadow-xl object-cover rounded block" src={toner.image.src} alt={toner.image.alt} width={600} height={600} />}
-		>
-			<TinaMarkdown content={toner.description} />
-			<Link href={toner.url ?? `/contact-us?subject=${toner.name}`} className="btn highlight w-full mt-8 text-center">
-				{toner.url ? 'Buy now' : 'Inquire Now'}
-			</Link>
-		</ProductLayout>
+		<TonerPage toner={toner} />
 	)
 }

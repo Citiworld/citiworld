@@ -1,11 +1,8 @@
 import { notFound } from "next/navigation"
-import { ProductLayout } from "@/components/layouts/product-layout"
 import { client } from '@/tina/__generated__/client'
-import { TinaMarkdown } from "tinacms/dist/rich-text"
-import { ProductSwiper } from "@/components/product-swiper"
 import { getPrinters } from "../page"
-import Link from "next/link"
 import { Metadata, ResolvingMetadata } from "next"
+import { MachinePage } from "./machine-page"
 
 export const dynamicParams = false
 
@@ -16,8 +13,7 @@ export async function generateStaticParams() {
 
 async function getPrinter({ id }: PrinterPageProps['params']) {
 	try {
-		const product = await client.queries.Printer({ relativePath: `${id}.md` })
-		return product.data.Printer
+		return await client.queries.Printer({ relativePath: `${id}.md` })
 	} catch (error) {
 		return undefined
 	}
@@ -31,31 +27,28 @@ type PrinterPageProps = {
 
 export async function generateMetadata({ params }: PrinterPageProps, parent: ResolvingMetadata): Promise<Metadata> {
 
-	const toner = await getPrinter(params)
+	const printer = await getPrinter(params)
 
-	if (!toner) notFound()
+	if (!printer) notFound()
 
 	const prevImages = (await parent).openGraph?.images || []
+	const data = printer?.data.Printer
 
 	return {
-		title: toner.name,
-		description: toner.description,
+		title: data.name,
+		description: data.description,
 		openGraph: {
-			images: [toner.images[0].src, ...prevImages],
+			images: [data.images[0].src, ...prevImages],
 		}
 	} as Metadata
 }
 
-
-export default async function PrinterPage({ params }: PrinterPageProps) {
+export default async function Page({ params }: PrinterPageProps) {
 	const printer = await getPrinter(params)
 
 	if (!printer) notFound()
 
 	return (
-		<ProductLayout product={printer} preview={<ProductSwiper images={printer.images} />}>
-			<TinaMarkdown content={printer.description} />
-			<Link href={`/contact-us?subject=${printer.name}`} className="btn highlight w-full mt-8 text-center">Inquire Now</Link>
-		</ProductLayout>
+		<MachinePage printer={printer} />
 	)
 }

@@ -21,95 +21,45 @@ export default defineConfig({
 	schema: {
 		collections: [
 			{
-				name: 'Page',
-				label: 'Pages',
-				path: 'content/pages',
+				name: 'HomePage',
+				label: 'Home Page',
+				path: 'content/pages/home',
 				fields: [
 					{
-						name: 'services',
-						label: 'Services',
-						type: 'object',
-						fields: [
-							{
-								type: 'string',
-								name: 'title',
-								label: 'Page title',
-								required: true
-							},
-							{
-								type: 'rich-text',
-								name: 'description',
-								label: 'Page description',
-								required: true,
-							},
-							imageSchema,
-							{
-								type: 'object',
-								name: 'services',
-								label: 'Services',
-								list: true,
-								required: true,
-								fields: [
-									{
-										type: 'string',
-										name: 'name',
-										label: 'Name',
-										required: true,
-									},
-									{
-										type: 'rich-text',
-										name: 'description',
-										label: 'Description',
-										required: true,
-									}
-								],
-								ui: {
-									itemProps(item) {
-										return { label: item.name }
-									}
-								}
-							},
-						],
+						type: 'string',
+						name: 'heroTitle',
+						label: 'Hero Title',
+						required: true,
 					},
 					{
-						name: 'about',
-						label: 'About Us',
-						type: 'object',
-						fields: [
-							{
-								type: 'string',
-								name: 'title',
-								label: 'Page title',
-								required: true
-							},
-							{
-								type: 'rich-text',
-								name: 'description',
-								label: 'Page description',
-								required: true,
-							},
-							imageSchema,
-							{
-								type: 'rich-text',
-								name: 'mission',
-								label: 'Mission',
-								required: true,
-							},
-							{
-								type: 'rich-text',
-								name: 'vision',
-								label: 'Vision',
-								required: true,
-							},
-							{
-								...imageArraySchema,
-								ui: {
-									...imageArraySchema.ui,
-									min: 3,
-									max: 3,
-								}
-							}
-						]
+						type: 'rich-text',
+						name: 'heroDescription',
+						label: 'Hero Description',
+						required: true,
+					},
+					{
+						type: 'image',
+						name: 'heroImage',
+						label: 'Hero Image',
+						required: true,
+					},
+					{
+						type: 'string',
+						name: 'productTitle',
+						label: 'Product Section Title',
+						required: true,
+					},
+					{
+						type: 'string',
+						name: 'serviceTitle',
+						label: 'Service Title',
+						required: true,
+					},
+					{
+						type: 'rich-text',
+						name: 'serviceDescription',
+						label: 'Service Description',
+						required: true,
 					}
 				],
 				ui: {
@@ -117,12 +67,115 @@ export default defineConfig({
 						create: false,
 						delete: false,
 					},
+					router: () => '/'
 				}
+			},
+			{
+				name: 'ServicePage',
+				label: 'Services Page',
+				path: 'content/pages/services',
+				ui: {
+					allowedActions: {
+						create: false,
+						delete: false,
+					},
+					router: () => '/services'
+				},
+				fields: [
+					{
+						type: 'string',
+						name: 'title',
+						label: 'Page title',
+						required: true
+					},
+					{
+						type: 'rich-text',
+						name: 'description',
+						label: 'Page description',
+						required: true,
+					},
+					imageSchema,
+					{
+						type: 'object',
+						name: 'services',
+						label: 'Services',
+						list: true,
+						required: true,
+						fields: [
+							{
+								type: 'string',
+								name: 'name',
+								label: 'Name',
+								required: true,
+							},
+							{
+								type: 'rich-text',
+								name: 'description',
+								label: 'Description',
+								required: true,
+							}
+						],
+						ui: {
+							itemProps(item) {
+								return { label: item.name }
+							}
+						}
+					},
+				],
+			},
+			{
+				name: 'AboutPage',
+				label: 'About Page',
+				path: 'content/pages/about',
+				ui: {
+					allowedActions: {
+						create: false,
+						delete: false,
+					},
+				},
+				fields: [
+					{
+						type: 'string',
+						name: 'title',
+						label: 'Page title',
+						required: true
+					},
+					{
+						type: 'rich-text',
+						name: 'description',
+						label: 'Page description',
+						required: true,
+					},
+					imageSchema,
+					{
+						type: 'rich-text',
+						name: 'mission',
+						label: 'Mission',
+						required: true,
+					},
+					{
+						type: 'rich-text',
+						name: 'vision',
+						label: 'Vision',
+						required: true,
+					},
+					{
+						...imageArraySchema,
+						ui: {
+							...imageArraySchema.ui,
+							min: 3,
+							max: 3,
+						}
+					}
+				]
 			},
 			{
 				name: 'Printer',
 				label: 'Printers',
 				path: 'content/printers',
+				ui: {
+					router: props => `/machines/${props.document._sys.filename}`
+				},
 				fields: [
 					{
 						type: 'string',
@@ -163,6 +216,9 @@ export default defineConfig({
 				name: 'Toner',
 				label: 'Toners and Ink',
 				path: 'content/toners-ink',
+				ui: {
+					router: props => `/toners-ink/${props.document._sys.filename}`
+				},
 				fields: [
 					{
 						type: 'string',
