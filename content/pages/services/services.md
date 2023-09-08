@@ -9,24 +9,26 @@ image:
   src: /placeholder/fixing.png
   alt: hand holding a screwdriver to fix a printer
 services:
-  - name: Service One
+  - name: Repair
     description: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
-  - name: Service 2
+  - name: Maintenance
     description: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
-  - name: Service 3
+  - name: Toner Management Program
     description: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
-  - name: Service 4
+  - name: 'Ink, Toner Cartridges and Drum Unit'
     description: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
-  - name: Service 5
+  - name: Printer
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      We assure you that Citiworld will provide excellent and fast service.
+      Inquire now to get your machines repaired and continue on your days of
+      work.
 ---
+
