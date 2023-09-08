@@ -1,34 +1,35 @@
 ---
 title: Our Services
 description: >
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic soluta
-  maiores labore veritatis perferendis laboriosam doloribus aspernatur
-  molestiae! Natus eveniet consequuntur quasi suscipit, enim soluta eum quod
-  optio distinctio?
+  Citiworld is an Authorize Service center of Brother PH. AS a company we assure
+  our clients that every service will be done with our utmost effort and extend
+  our clients machine's lifespan
 image:
   src: /placeholder/fixing.png
   alt: hand holding a screwdriver to fix a printer
 services:
   - name: Repair
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      We assure you that Citiworld will provide excellent and fast service.
+      Inquire now to get your machines repaired and continue on your days of
+      work.
   - name: Maintenance
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      Increase longevity of your machines and schedule a check-up service. Our
+      technician will diagnose your machines and help you and your machines stay
+      together much longer.
   - name: Toner Management Program
     description: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
   - name: 'Ink, Toner Cartridges and Drum Unit'
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      Don't let you printer go dry! Inquire to get your 100% original and new
+      consumables for your printers.
   - name: Printer
     description: >
-      We assure you that Citiworld will provide excellent and fast service.
-      Inquire now to get your machines repaired and continue on your days of
-      work.
+      Get the right partner in your office, as Citiworld will help you get
+      settled in with a machine that is perfect for your work style.
 ---
+
 
