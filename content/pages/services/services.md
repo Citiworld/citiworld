@@ -1,7 +1,7 @@
 ---
 title: Our Services
 description: >
-  Citiworld is an Authorize Service center of Brother PH. AS a company we assure
+  Citiworld is an Authorize Service center of Brother PH. As a company we assure
   our clients that every service will be done with our utmost effort and extend
   our clients machine's lifespan
 image:
@@ -31,5 +31,6 @@ services:
       Get the right partner in your office, as Citiworld will help you get
       settled in with a machine that is perfect for your work style.
 ---
+
 
 
