@@ -57,7 +57,7 @@ export function HomePage({ printer, toner, page }: HomePageProps) {
 							<div className={styles.card}>
 								<figure>
 									{printer?.images &&
-										<Image src={printer.images[0].src} alt={printer.images[0].alt} fill className="w-full h-full object-cover" />
+										<Image src={printer.images[0].src} alt={printer.images[0].alt} fill className="w-full h-full object-cover" sizes="(max-width: 400px) 100vw, (max-width: 640px) 368px, 432px" />
 									}
 								</figure>
 								<h2>Machines</h2>
@@ -68,7 +68,7 @@ export function HomePage({ printer, toner, page }: HomePageProps) {
 							<div className={styles.card}>
 								<figure>
 									{toner?.image &&
-										<Image src={toner?.image.src} alt={toner?.image.alt} fill className="w-full h-full object-cover" />
+										<Image src={toner?.image.src} alt={toner?.image.alt} fill className="w-full h-full object-cover" sizes="(max-width: 400px) 100vw, (max-width: 640px) 368px, 432px" />
 									}
 								</figure>
 								<h2>Toners and Ink</h2>

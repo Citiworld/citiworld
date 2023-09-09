@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 		default: 'CitiWorld',
 	},
 	generator: 'Next.js',
-	description: 'Discover top-quality Brother printers and genuine toner cartridges for exceptional printing results. Shop now for reliable printing solutions and unbeatable deals!',
+	description: 'Licensed service center of Brother Philippines. Discover top-quality Brother printers and genuine toner cartridges for exceptional printing results. Shop now for reliable printing solutions and unbeatable deals!',
 	manifest: '/manifest.webmanifest',
 	keywords: ['printer', 'toner', 'ink', 'brother'],
 	applicationName: 'CitiWorld',

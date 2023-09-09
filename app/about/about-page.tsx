@@ -35,13 +35,13 @@ export function AboutPage({ page }: AboutPageProps) {
 			</div>
 			<div className="absolute bottom-20 -translate-x-10 flex flex-col flex-wrap h-[700px] justify-center gap-8">
 				<figure className={figClassName}>
-					<Image src={AboutPage.images[0].src} alt={AboutPage.images[0].alt} fill className={imgClassName} />
+					<Image src={AboutPage.images[0].src} alt={AboutPage.images[0].alt} fill className={imgClassName} sizes="(max-width: 1536px) 192px, 240px" />
 				</figure>
 				<figure className={figClassName}>
-					<Image src={AboutPage.images[1].src} alt={AboutPage.images[1].alt} fill className={imgClassName} />
+					<Image src={AboutPage.images[1].src} alt={AboutPage.images[1].alt} fill className={imgClassName} sizes="(max-width: 1536px) 192px, 240px" />
 				</figure>
 				<figure className={figClassName}>
-					<Image src={AboutPage.images[2].src} alt={AboutPage.images[2].alt} fill className={imgClassName} />
+					<Image src={AboutPage.images[2].src} alt={AboutPage.images[2].alt} fill className={imgClassName} sizes="(max-width: 1536px) 192px, 240px" />
 				</figure>
 			</div>
 			<Wave className="translate-y-18 md:translate-y-36 absolute bottom-0 -z-1" />
