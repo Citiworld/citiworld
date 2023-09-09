@@ -29,9 +29,9 @@ images:
     alt: A brother printer
 ---
 
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit
-* Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-* Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-* Excepteur sint occaecat cupidatat non proident
-* Sunt in culpa qui officia deserunt mollit anim id est laborum
+* Fast print speed up to 34ppm
+* First page out in less than 8.5 seconds
+* Automatic 2-sided Printing
+* 250-sheet default paper tray
+* Wireless & mobile connectivity
+* 3,000-page optional high-yield toner
