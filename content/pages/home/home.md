@@ -15,9 +15,10 @@ heroImage: /placeholder/home-bg.png
 icons:
   - 'material-symbols:settings'
   - 'material-symbols:tools-wrench-rounded'
-  - 'material-symbols:settings'
+  - 'material-symbols:123'
   - 'material-symbols:settings'
 ---
+
 
 
 
