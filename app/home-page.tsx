@@ -3,12 +3,12 @@
 import Link from 'next/link'
 import styles from './home.module.css'
 import { Wave, Circle, Pixel, Gear, Pipe, Pipe2 } from '@/components/assets'
-import homebg from '@/public/placeholder/home-bg.png'
 import Image from 'next/image'
 import { PrinterQuery, TonerQuery } from '@/tina/__generated__/types'
 import client from '@/tina/__generated__/client'
 import { tinaField, useTina } from 'tinacms/dist/react'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import { Icon } from '@iconify/react'
 
 type HomePageProps = {
 	printer?: PrinterQuery['Printer'] | null
@@ -84,7 +84,11 @@ export function HomePage({ printer, toner, page }: HomePageProps) {
 			<section className="py-12 md:py-24 relative">
 				<div className="container grid md:grid-cols-2 gap-8 relative z-1">
 					<div className={styles['service-grid']}>
-						{HomePage.icons.map((icon, i) => <figure key={i} data-tina-field={tinaField(HomePage, 'icons', i)}><i className={icon} /></figure>)}
+						{HomePage.icons.map((icon, i) =>
+							<figure key={i} data-tina-field={tinaField(HomePage, 'icons', i)}>
+								<Icon icon={icon} />
+							</figure>
+						)}
 					</div>
 					<div className="self-center text-center md:text-right">
 						<h1 className="head-1 text-secondary-900" data-tina-field={tinaField(HomePage, 'serviceTitle')}>{HomePage.serviceTitle}</h1>

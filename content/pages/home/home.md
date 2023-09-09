@@ -13,10 +13,10 @@ serviceDescription: >
   3. TONER MANAGEMENT PROGRAM
 heroImage: /placeholder/home-bg.png
 icons:
-  - 'i-[material-symbols--settings]'
-  - 'i-[material-symbols--tools-wrench-rounded]'
-  - 'i-[material-symbols--settings]'
-  - 'i-[material-symbols--settings]'
+  - 'material-symbols:settings'
+  - 'material-symbols:tools-wrench-rounded'
+  - 'material-symbols:settings'
+  - 'material-symbols:settings'
 ---
 
 
