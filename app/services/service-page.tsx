@@ -19,7 +19,7 @@ export function ServicePage({ page }: ServicePageProps) {
 				{ServicePage.services.map(s =>
 					<div key={s.name} className="flex gap-x-4 lg:gap-x-8">
 						<i className="i-[material-symbols--settings-suggest] max-sm:hidden text-9xl text-secondary-900"></i>
-						<div>
+						<div className="flex-1">
 							<p className="head-1 text-secondary-900 tracking-wider mb-2" data-tina-field={tinaField(s, 'name')}>{s.name}</p>
 							<div data-tina-field={tinaField(s, 'description')}>
 								<TinaMarkdown content={s.description} />
