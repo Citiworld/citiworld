@@ -29,7 +29,13 @@ export function HomePage({ printer, toner, page }: HomePageProps) {
 					<div className="max-lg:hidden"></div>
 					<div className={styles.slice}>
 						<figure>
-							<Image src={HomePage.heroImage} alt="" className="w-full h-full bottom-0 object-bottom object-cover" fill />
+							<Image
+								src={HomePage.heroImage}
+								alt=""
+								className="w-full h-full bottom-0 object-bottom object-cover"
+								fill priority
+								sizes="(max-width: 1024px) 100vw, 50vw"
+							/>
 						</figure>
 					</div>
 				</div>
@@ -78,10 +84,7 @@ export function HomePage({ printer, toner, page }: HomePageProps) {
 			<section className="py-12 md:py-24 relative">
 				<div className="container grid md:grid-cols-2 gap-8 relative z-1">
 					<div className={styles['service-grid']}>
-						<figure><Gear /></figure>
-						<figure><Gear /></figure>
-						<figure><Gear /></figure>
-						<figure><Gear /></figure>
+						{HomePage.icons.map((icon, i) => <figure key={i} data-tina-field={tinaField(HomePage, 'icons', i)}><i className={icon} /></figure>)}
 					</div>
 					<div className="self-center text-center md:text-right">
 						<h1 className="head-1 text-secondary-900" data-tina-field={tinaField(HomePage, 'serviceTitle')}>{HomePage.serviceTitle}</h1>

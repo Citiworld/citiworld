@@ -14,7 +14,7 @@ export function InfoLayout({ title, description, imgSrc, caption, children }: In
 			<section className="bg-gradient-to-b from-secondary-900 to-accent-500">
 				<div className="container max-w-screen-xl flex flex-col justify-end lg:h-36">
 					<figure className="relative lg:hidden my-8 h-92 md:h-[28rem] rounded-3xl overflow-hidden shadow-xl">
-						<Image src={imgSrc} alt={caption} className="object-cover" fill />
+						<Image src={imgSrc} alt={caption} className="object-cover" fill priority />
 					</figure>
 					<h1 className="head-1 text-white leading-none translate-y-2">{title}</h1>
 				</div>

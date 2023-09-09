@@ -33,9 +33,9 @@
 }
 
 .service-grid {
-	@apply grid grid-cols-2 gap-4 max-w-sm md:gap-6 md:max-w-md mx-auto self-center;
+	@apply grid grid-cols-2 gap-4 max-w-sm md:gap-6 md:max-w-md mx-auto self-center text-8xl sm:text-9xl lg:text-[9rem] leading-none text-white;
 }
 
 .service-grid > figure {
-	@apply aspect-square w-full p-8 rounded-xl bg-highlight-400 shadow-xl;
+	@apply aspect-square w-full p-4 sm:p-6 md:p-8 rounded-xl bg-highlight-400 shadow-xl flex items-center;
 }

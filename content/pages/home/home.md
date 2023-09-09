@@ -11,7 +11,14 @@ serviceDescription: >
   debitis vero quos, eaque officia pariatur adipisci molestias culpa. Saepe
   eveniet totam pariatur quam aut quae consequatur. Qui, quis cupiditate.
 heroImage: /placeholder/home-bg.png
+icons:
+  - 'i-[material-symbols--settings]'
+  - 'i-[material-symbols--tools-wrench-rounded]'
+  - 'i-[material-symbols--settings]'
+  - 'i-[material-symbols--settings]'
 ---
+
+
 
 
 

@@ -60,6 +60,17 @@ export default defineConfig({
 						name: 'serviceDescription',
 						label: 'Service Description',
 						required: true,
+					},
+					{
+						type: 'string',
+						name: 'icons',
+						label: 'Icons',
+						required: true,
+						list: true,
+						ui: {
+							min: 4,
+							max: 4,
+						}
 					}
 				],
 				ui: {
