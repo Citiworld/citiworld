@@ -5,8 +5,8 @@ description: >
   our clients that every service will be done with our utmost effort and extend
   our clients machine's lifespan
 image:
-  src: /placeholder/fixing.png
-  alt: hand holding a screwdriver to fix a printer
+  src: /images/2.jpg
+  alt: services
 services:
   - name: Repair
     description: >
@@ -32,6 +32,7 @@ services:
       Get the right partner in your office, as Citiworld will help you get
       settled in with a machine that is perfect for your work style.
 ---
+
 
 
 
