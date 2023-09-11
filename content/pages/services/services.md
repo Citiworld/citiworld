@@ -20,8 +20,9 @@ services:
       together much longer.
   - name: Toner Management Program
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+      This programs lets you borrow one of our printer and save you on costly
+      repairs and maintenance because we got it all for you, this program
+      includes printers, toners, drum units, repairs and maintenance.
   - name: 'Ink, Toner Cartridges and Drum Unit'
     description: >
       Don't let you printer go dry! Inquire to get your 100% original and new
@@ -31,6 +32,7 @@ services:
       Get the right partner in your office, as Citiworld will help you get
       settled in with a machine that is perfect for your work style.
 ---
+
 
 
 
