@@ -16,6 +16,11 @@ type ProductSwiperProps = {
 export function ProductSwiper({ images }: ProductSwiperProps) {
 	const [mainSwiper, setMainSwiper] = useState<SwiperClass>()
 	const [thumbsSwiper, setThumbSwiper] = useState<SwiperClass>()
+	const loopedSlides = 5
+
+	while (images.length < loopedSlides * 2) {
+		images.push(...images)
+	}
 
 	return (
 		<>
@@ -24,7 +29,7 @@ export function ProductSwiper({ images }: ProductSwiperProps) {
 				centeredSlides
 				loop
 				direction="horizontal"
-				loopedSlides={5}
+				loopedSlides={loopedSlides}
 				modules={[Navigation, Controller]}
 				navigation
 				onSwiper={setMainSwiper}
