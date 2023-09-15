@@ -31,6 +31,7 @@ export const imageArraySchema = {
 	name: 'images',
 	label: 'Images',
 	list: true,
+	required: true,
 	ui: {
 		itemProps(item) {
 			return { label: item.alt }
