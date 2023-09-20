@@ -77,8 +77,8 @@ export default async function RootLayout({
 								<p className="font-medium text-base">CONTACT US</p>
 								<p><i className="text-base mr-1 i-[material-symbols--alternate-email-rounded]" /> <a className="underline" href={`mailto:${process.env.MAIL_USER}`}>{process.env.MAIL_USER}</a> </p>
 							</div>
-							{addresses.map(a => (
-								<div className="space-y-1/2">
+							{addresses.map((a, i) => (
+								<div key={i} className="space-y-1/2">
 									<p className="font-medium">{a.name}:</p>
 									<p><i className="text-base mr-1 i-[material-symbols--call]" />{a.tel}</p>
 									<p><i className="text-base mr-1 i-[material-symbols--location-on-rounded]" />{a.address}</p>
