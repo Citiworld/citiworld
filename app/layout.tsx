@@ -9,6 +9,7 @@ import ShopeeLogo from '@/public/assets/shopee.svg'
 import { MobileNavBar } from './mobile-nav-bar'
 import { navItems } from './nav-items'
 import { DesktopNavBar } from './desktop-nav-bar'
+import client from '@/tina/__generated__/client'
 
 export const metadata: Metadata = {
 	title: {
@@ -27,11 +28,18 @@ export const metadata: Metadata = {
 	category: 'stationery'
 }
 
-export default function RootLayout({
+async function getAddresses() {
+	const { data } = await client.queries.Global({ relativePath: 'global.md' })
+	return data.Global
+}
+
+export default async function RootLayout({
 	children,
 }: {
 	children: React.ReactNode
 }) {
+	const { addresses } = await getAddresses()
+
 	return (
 		<html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
 			<body>
@@ -55,12 +63,6 @@ export default function RootLayout({
 						</div>
 						<nav className="space-y-3 flex flex-col xl:pr-10 xl:border-r-1 font-bold justify-center">
 							{navItems.map(item => <Link key={item.link} href={item.link}>{item.text}</Link>)}
-						</nav>
-						<div className="font-secondary space-y-2 text-sm">
-							<p className="font-medium text-base">CONTACT US</p>
-							<p><i className="text-base mr-1 i-[material-symbols--alternate-email-rounded]" /> <a className="underline" href={`mailto:${process.env.MAIL_USER}`}>{process.env.MAIL_USER}</a> </p>
-							<p><i className="text-base mr-1 i-[material-symbols--call]" /> 8-723-4894/8-725-7031</p>
-							<p><i className="text-base mr-1 i-[material-symbols--location-on-rounded]" /> 3F Grayline Ventures Bldg. 14 Arayat St., Brgy. Malamig, Mandaluyong, Philippines</p>
 							<div className="flex gap-x-2 pt-1 footer-icons">
 								<a href="https://www.facebook.com/profile.php?id=100094323159645">
 									<Image className="w-10" src={FacebookLogo} alt="white f inside a dark blue circle" />
@@ -69,6 +71,20 @@ export default function RootLayout({
 									<Image className="w-10" src={ShopeeLogo} alt="white outline of a bag with an 'S' inside all within a dark blue circle" />
 								</a>
 							</div>
+						</nav>
+						<div className="font-secondary space-y-4 text-sm">
+							<div className="space-y-1/2">
+								<p className="font-medium text-base">CONTACT US</p>
+								<p><i className="text-base mr-1 i-[material-symbols--alternate-email-rounded]" /> <a className="underline" href={`mailto:${process.env.MAIL_USER}`}>{process.env.MAIL_USER}</a> </p>
+							</div>
+							{addresses.map(a => (
+								<div className="space-y-1/2">
+									<p className="font-medium">{a.name}:</p>
+									<p><i className="text-base mr-1 i-[material-symbols--call]" />{a.tel}</p>
+									<p><i className="text-base mr-1 i-[material-symbols--location-on-rounded]" />{a.address}</p>
+								</div>
+							))}
+
 						</div>
 					</div>
 				</footer>

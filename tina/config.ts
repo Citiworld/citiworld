@@ -21,6 +21,51 @@ export default defineConfig({
 	schema: {
 		collections: [
 			{
+				name: 'Global',
+				label: 'Global',
+				path: 'content/global',
+				fields: [
+					{
+						type: 'object',
+						name: 'addresses',
+						label: 'Addresses',
+						list: true,
+						fields: [
+							{
+								type: 'string',
+								name: 'name',
+								label: 'Name',
+								required: true,
+							},
+							{
+								type: 'string',
+								name: 'address',
+								label: 'Address',
+								required: true,
+							},
+							{
+								type: 'string',
+								name: 'tel',
+								label: 'Telephone Number(s)',
+								required: true
+							},
+						],
+						required: true,
+						ui: {
+							itemProps(props) {
+								return { label: props.name }
+							}
+						}
+					}
+				],
+				ui: {
+					allowedActions: {
+						create: false,
+						delete: false
+					},
+				},
+			},
+			{
 				name: 'HomePage',
 				label: 'Home Page',
 				path: 'content/pages/home',
