@@ -10,10 +10,9 @@ export default function ContactPage() {
 	return (
 		<section className={styles.section}>
 			<div>
-				<FormFallback />
-				{/* <Suspense fallback={<FormFallback />}>
+				<Suspense fallback={<FormFallback />}>
 					<ContactForm />
-				</Suspense> */}
+				</Suspense>
 				<div>
 					<iframe title="our google maps location" className="w-full h-full" src="https://www.google.com/maps/embed/v1/place?q=Citiworld,+Grayline+ventures,+Arayat,+Mandaluyong,+Metro+Manila,+Philippines&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" />
 				</div>
