@@ -20,7 +20,7 @@ export function InfoLayout({ title, description, imgSrc, caption, children }: In
 				</div>
 			</section>
 			<div className="grid container gap-x-8 max-w-screen-xl lg:grid-cols-2 relative -top-28">
-				<div className="max-w-prose pt-32 text-xl/loose">{description}</div>
+				<div className="max-w-prose pt-32 text-lg/8">{description}</div>
 				<div className="max-lg:hidden">
 					<figure className="h-92 rounded-3xl overflow-hidden relative shadow-xl">
 						<Image src={imgSrc} alt={caption} className="object-cover" fill priority sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px" />
