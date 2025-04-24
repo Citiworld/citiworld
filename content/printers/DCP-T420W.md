@@ -3,7 +3,8 @@ name: DCP-T430W 3-in-1 Color Inkjet Multi-function Centre
 brand: Brother
 price: 8950
 images:
-  - {}
+  - src: /DCP-T430W/LEFT DCP-T430W .png
+    alt: Left
   - src: /DCP-T430W/RIGHT DCP-T430W.png
     alt: Right
   - src: /DCP-T430W/FRONT DCP-T430W.png
