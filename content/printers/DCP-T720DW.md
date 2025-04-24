@@ -3,11 +3,12 @@ name: DCP-T720DW 3-in-1 Color Inkjet Multi-function Centre
 brand: Brother
 price: 13950
 images:
-  - src: /images/DCP-T730DW/DCP-T730DW FRONT.webp
-    alt: front
+  - src: /images/DCP-T730DW/DCP-T730DW LEFT.webp
+    alt: Left
   - src: /images/DCP-T730DW/DCP-T730DW RIGHT.webp
     alt: Right
-  - {}
+  - src: /images/DCP-T730DW/DCP-T730DW FRONT.webp
+    alt: front
 ---
 
 * Refill Tank
