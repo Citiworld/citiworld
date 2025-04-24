@@ -15,7 +15,7 @@ images:
 * Print / Copy / Scan
 * Printing speed up to 16/9 ipm (ISO) Mono/Color
 * Wired / Wireless (2.4/5 Ghz)
-* Print resolution up to 1,200 x 6,000 dpi
+* Print resolution up to 1,200 x 6,000 dpi (Windows Only)
 * Paper input capacity 150 sheets
 * 1-line LCD display
-* Mobile print: Brother iPr
+* Mobile Print using Brother Mobile Connect App
