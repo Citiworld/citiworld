@@ -3,11 +3,12 @@ name: DCP-T430W 3-in-1 Color Inkjet Multi-function Centre
 brand: Brother
 price: 8950
 images:
-  - src: /DCP-T430W/DCP-T430W RIGHT.webp
-    alt: Right
-  - {}
   - src: /DCP-T430W/DCP-T430W.webp
     alt: Front
+  - src: /DCP-T430W/DCP-T430W RIGHT.webp
+    alt: Right
+  - src: /DCP-T430W/DCP-T430W LEFT.webp
+    alt: Left
 ---
 
 * Refill tank
