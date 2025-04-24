@@ -1,7 +1,7 @@
 ---
 title: Who We Are
 description: >
-  Citiworld was established at April 24,
+  Citiworld was established at April 23,
 
   2001, it has been offering great service and products to all its customers for
 
@@ -40,6 +40,4 @@ images:
   - src: /placeholder/fixing.png
     alt: hand holding a screwdriver to fix a printer
 ---
-
-
 
