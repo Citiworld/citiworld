@@ -3,6 +3,9 @@ name: DCP-L2640DW 3-in-1 Mono Laser Multi-function Centre
 brand: Brother
 price: 11950
 images:
+  - src: /images/DCP-L2640DW/FRONT DCP-L2640DW.webp
+    alt: Front
+  - {}
   - src: /images/DCP-L2640DW/LEFT DCP-L2640DW.webp
     alt: LEFT
 ---
