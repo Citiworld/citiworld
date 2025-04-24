@@ -5,7 +5,8 @@ price: 11950
 images:
   - src: /images/DCP-L2640DW/FRONT DCP-L2640DW.webp
     alt: Front
-  - {}
+  - src: /images/DCP-L2640DW/RIGHT DCP-L2640DW.webp
+    alt: Right
   - src: /images/DCP-L2640DW/LEFT DCP-L2640DW.webp
     alt: LEFT
 ---
