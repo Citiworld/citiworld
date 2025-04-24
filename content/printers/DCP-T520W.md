@@ -1,23 +1,17 @@
 ---
-name: DCP-T520W 3-in-1 Color Inkjet Multi-function Centre
+name: DCP-T530W 3-in-1 Color Ink Tank Printer
 brand: Brother
-price: 9950
+price: 10950
 images:
-  - src: /images/DCP-T520W/front.jpg
-    alt: front
-  - src: /images/DCP-T520W/left.jpg
-    alt: left profile
-  - src: /images/DCP-T520W/right.jpg
-    alt: right profile
-  - src: /images/DCP-T520W/dimensions.jpg
-    alt: printer dimensions
+  - src: /images/DCP-T530DW/DCP-T530DW Right.webp
+    alt: 'right '
 ---
 
 * Refill Tank
 * Print / Copy / Scan
-* Printing speed up to 17/9.5 ipm (ISO) Mono/Color
-* Wireless network and highspeed USB 2.0
+* Printing speed up to 16/9 ipm (ISO) Mono/Color
+* Wired / Wireless (2.4/5 Ghz)
 * Print resolution up to 1,200 x 6,000 dpi
 * Paper input capacity 150 sheets
 * 1-line LCD display
-* Mobile print: Brother iPrint\&Scan, Airprint & Mopria
+* Mobile print: Brother iPr
