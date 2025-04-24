@@ -7,7 +7,8 @@ images:
     alt: Front
   - src: /images/DCP-T530DW/DCP-T530DW Right.webp
     alt: 'right '
-  - {}
+  - src: /images/DCP-T530DW/DCP-T530DW Left.webp
+    alt: Left
 ---
 
 * Refill Tank
