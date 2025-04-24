@@ -3,12 +3,12 @@ name: DCP-T530W 3-in-1 Color Ink Tank Printer
 brand: Brother
 price: 10950
 images:
-  - src: /images/DCP-T530DW/DCP-T530DW Front.webp
-    alt: Front
   - src: /images/DCP-T530DW/DCP-T530DW Right.webp
     alt: 'right '
   - src: /images/DCP-T530DW/DCP-T530DW Left.webp
     alt: Left
+  - src: /images/DCP-T530DW/DCP-T530DW Front.webp
+    alt: Front
 ---
 
 * Refill Tank
