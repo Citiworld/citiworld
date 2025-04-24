@@ -5,10 +5,10 @@ price: 13950
 images:
   - src: /images/DCP-T730DW/DCP-T730DW LEFT.webp
     alt: Left
-  - src: /images/DCP-T730DW/DCP-T730DW RIGHT.webp
-    alt: Right
   - src: /images/DCP-T730DW/DCP-T730DW FRONT.webp
     alt: front
+  - src: /images/DCP-T730DW/DCP-T730DW RIGHT.webp
+    alt: Right
 ---
 
 * Refill Tank
