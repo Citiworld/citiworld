@@ -1,5 +1,5 @@
 ---
-name: DCP-T720DW 3-in-1 Color Inkjet Multi-function Centre
+name: DCP-T720DW 3-in-1 Color Ink Tank Printer
 brand: Brother
 price: 13950
 images:
