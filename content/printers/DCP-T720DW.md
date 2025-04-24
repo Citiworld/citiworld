@@ -1,5 +1,5 @@
 ---
-name: DCP-T720DW 3-in-1 Color Ink Tank Printer
+name: DCP-T730DW 3-in-1 Color Ink Tank Printer
 brand: Brother
 price: 13950
 images:
