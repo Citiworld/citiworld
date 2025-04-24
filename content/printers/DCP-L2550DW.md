@@ -1,9 +1,9 @@
 ---
-name: DCP-L2550DW Monochrome Laser Fax Machine
+name: DCP-L2640DW 3-in-1 Mono Laser Multi-function Centre
 brand: Brother
-price: 12950
+price: 11950
 images:
-  - src: /images/DCP-L2550DW/front.jpg
+  - src: /images/DCP-L2640DW/FRONT DCP-L2640.png
     alt: front
   - src: /images/DCP-L2550DW/left.jpg
     alt: left
@@ -18,6 +18,5 @@ images:
 * 250-sheet default paper tray
 * 50 sheets automatic document feeder
 * 16 characters x 2-line LCD
-* Wireless & mobile connectivity: Brother iPrint\&Scan, Airprint, Morpia, Google Cloud Print
-* High yield toner 3,000 pages
-* **With one additional free, total of two toners inside the box**
+* Wired / Wireless LAN
+*  Print from mobile using Brother Mobile connect, Airprint & Mopria
