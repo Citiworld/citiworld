@@ -1,16 +1,10 @@
 ---
-name: MFC-T920DW 3-in-1 Color Inkjet Multi-function Centre
+name: MFC-T930DW 4-in-1 Color Ink Tank Printer
 brand: Brother
-price: 18950
+price: 19950
 images:
-  - src: /images/MFC-T920DW/front.jpg
+  - src: /images/MFC-T930DW/MFC-T930DW FRONT.webp
     alt: front
-  - src: /images/MFC-T920DW/right.jpg
-    alt: right
-  - src: /images/MFC-T920DW/left.jpg
-    alt: left
-  - src: /images/MFC-T920DW/dimensions.jpg
-    alt: printer dimensions
 ---
 
 * Refill Tank
