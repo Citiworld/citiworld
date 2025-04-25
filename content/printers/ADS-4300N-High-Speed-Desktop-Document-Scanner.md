@@ -7,6 +7,7 @@ images:
     alt: FRONT
   - src: /images/ADS-4300N/ADS-4300N RIGHT.webp
     alt: RIGHT
-  - {}
+  - src: /images/ADS-4300N/ADS-4300N LEFT.webp
+    alt: LEFT
 ---
 
