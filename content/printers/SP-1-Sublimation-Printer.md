@@ -3,6 +3,8 @@ name: SP-1 Sublimation Printer
 brand: Brother
 price: 28995
 images:
+  - src: /images/SP-1 Sublimation Printer /SP-1 FRONT.webp
+    alt: FRONT
   - src: /images/SP-1 Sublimation Printer /SP-1 RIGHT.webp
     alt: Right
 ---
