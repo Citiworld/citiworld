@@ -1,16 +1,12 @@
 ---
-name: DCP-T820DW 3-in-1 Color Inkjet Multi-function Centre
+name: DCP-T830 3-in-1 Color Ink Tank Printer
 brand: Brother
-price: 13950
+price: 14950
 images:
+  - src: /images/DCP-T830DW/DCP-T830DW FRONT.webp
+    alt: FRONT
   - src: /images/DCP-T820DW/front.jpg
     alt: front
-  - src: /images/DCP-T820DW/left.jpg
-    alt: left
-  - src: /images/DCP-T820DW/right.jpg
-    alt: right
-  - src: /images/DCP-T820DW/dimensions.jpg
-    alt: dimensions
 ---
 
 * Refill Tank
