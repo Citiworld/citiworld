@@ -15,10 +15,10 @@ images:
 * Print / Copy / Scan
 * Printing speed up to 17/16.5 ipm (ISO) Mono/Color
 * Duplex printing
-* Wi-Fi Direct and highspeed USB 2.0
+* Wired / Wireless (2.4/5 Ghz)
 * Print resolution up to 1,200 x 6,000 dpi
 * 20-sheet auto document feeder
 * Paper input capacity 150 sheets
-* Multipurpose tray 80 sheets
+* Multipurpose tray capacity  up to 80 sheets
 * 1-line LCD display
-* Mobile print: Brother iPrint\&Scan, AirPrint & Mopria
+* Mobile print: Brother Mobile Connect App
