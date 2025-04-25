@@ -3,6 +3,10 @@ name: MFC-T930DW 4-in-1 Color Ink Tank Printer
 brand: Brother
 price: 19950
 images:
+  - src: /images/MFC-T930DW/MFC-T930DW LEFT.webp
+    alt: LEFT
+  - src: /images/MFC-T930DW/MFC-T930DW RIGHT.webp
+    alt: RIGHT
   - src: /images/MFC-T930DW/MFC-T930DW FRONT.webp
     alt: front
 ---
