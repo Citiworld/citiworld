@@ -11,3 +11,12 @@ images:
     alt: LEFT
 ---
 
+* Scanning speed up to 40 ppm (mono/colour)
+* Scan direct to USB host
+* Automatic 2-sided scan up to 80 ipm
+* Wired network connectivity
+* Super speed USB 3.0 local port
+* High Resolution scanning up to 1200 x 1200 dpi
+* LED indicator with 3 configurable Hot keys
+* 80-sheet Automatic Document Feeder
+* Mobile support: Mobile connect and Airprint
