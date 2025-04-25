@@ -5,10 +5,10 @@ price: 14950
 images:
   - src: /images/DCP-T830DW/DCP-T830DW LEFT.webp
     alt: LEFT
-  - src: /images/DCP-T830DW/DCP-T830DW FRONT.webp
-    alt: FRONT
   - src: /images/DCP-T830DW/DCP-T830DW RIGHT.webp
     alt: RIGHT
+  - src: /images/DCP-T830DW/DCP-T830DW FRONT.webp
+    alt: FRONT
 ---
 
 * Refill Tank
