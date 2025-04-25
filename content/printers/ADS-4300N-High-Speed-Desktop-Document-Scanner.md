@@ -5,7 +5,8 @@ price: 24990
 images:
   - src: /images/ADS-4300N/ADS-4300N FRONT.webp
     alt: FRONT
-  - {}
+  - src: /images/ADS-4300N/ADS-4300N RIGHT.webp
+    alt: RIGHT
   - {}
 ---
 
