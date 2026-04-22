@@ -5,7 +5,7 @@ price: 75000
 images:
   - src: /images/KM-C368/konica C368_1.jpg
     alt: FRONT
-  - src: /images/SP-1 Sublimation Printer /SP-1 RIGHT.webp
+  - src: /images/KM-C368/konica C368_2.jpg
     alt: Right
 ---
 
